@@ -1,28 +1,62 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <navbar/>
+        <router-view/>
+        <notifications group="foo"/>
+    <pie/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+// import {db} from "./db.js"
+import navbar from './components/navbar.vue'
+import pie from './components/pie.vue'
+
+// import footer from './components/footer.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    navbar,
+    pie
+    
+  },
+
+  data(){
+
+    return{
+      
+    }
+  },
+
+
+  //  firestore: {
+  //     loading1:db.collection('Lenovo'),
+  //     loading2:db.collection('MSI'),
+  //   },
+
 }
 </script>
 
-<style>
+<style >
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
