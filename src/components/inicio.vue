@@ -28,10 +28,10 @@
                     </div>
                     <div class="row px-3"> <label class="mb-1">
                             <h6 class="mb-0 text-sm">Correo electronico</h6>
-                        </label> <input class="mb-4" type="text" name="email" placeholder="Introduce un correo electronico válido"> </div>
+                        </label> <input class="mb-4" type="text" name="email" v-model="email" placeholder="Introduce un correo electronico válido"> </div>
                     <div class="row px-3"> <label class="mb-1">
                             <h6 class="mb-0 text-sm">Contraseña</h6>
-                        </label> <input type="password" name="password" placeholder="Introduce tu contraseña"> </div>
+                        </label> <input type="password" name="password" v-model="password" placeholder="Introduce tu contraseña"> </div>
                     <div class="row px-3 mb-4">
                     </div> 
                     <div class="row mb-3 px-3"> <button @click.prevent="login" class="btn btn-blue text-center">Iniciar sesión</button> </div>
@@ -50,7 +50,7 @@
 <script lang="js">
 
 import '@/db.js'
-// import Firebase from '../db'
+import Firebase from '../db'
 import Firebasegoogle from '@/db.js'
 
   export default  {
@@ -67,39 +67,39 @@ import Firebasegoogle from '@/db.js'
       }
     },
     methods: {
-      // login(){
-      //   if (this.email && this.password){
-      //        Firebase.auth.signInWithEmailAndPassword(this.email, this.password)
-      //          .then(user => {
-      //            this.$router.push({ name: 'Home' })
-      //            console.log(user)
-      //           this.$notify({
-      //            group: 'foo',
-      //            type: 'success',
-      //           position:'top left',
-      //           title: 'Bienvenido',
-      //            text: 'Se ha registrado satisfactoriamente'
-      //         })
-      //       })
-      //         .catch( () => {
-      //           this.$notify({
-      //            group: 'foo',
-      //             type: 'error',
-      //            position:'top left',
-      //           title: 'Ups, algo no ha salido bien',
-      //            text: 'El correo o contraseña no existe en los registros'
-      //          })
-      //         })
-      //   }else{
-      //     this.$notify({
-      //     group: 'foo',
-      //     type: 'error',
-      //     position:'top left',
-      //     title: 'Ups, algo no ha salido bien',
-      //     text: 'Comprueba que todos tus campos se han completado.'
-      //   });
-      //   }
-      //  },
+      login(){
+        if (this.email && this.password){
+             Firebase.auth.signInWithEmailAndPassword(this.email, this.password)
+               .then(user => {
+                 this.$router.push({ name: 'Home' }).reload()
+                 console.log(user)
+                this.$notify({
+                 group: 'foo',
+                 type: 'success',
+                position:'top left',
+                title: 'Bienvenido',
+                 text: 'Se ha registrado satisfactoriamente'
+              })
+            })
+              .catch( () => {
+                this.$notify({
+                 group: 'foo',
+                  type: 'error',
+                 position:'top left',
+                title: 'Ups, algo no ha salido bien',
+                 text: 'El correo o contraseña no existe en los registros'
+               })
+              })
+        }else{
+          this.$notify({
+          group: 'foo',
+          type: 'error',
+          position:'top left',
+          title: 'Ups, algo no ha salido bien',
+          text: 'Comprueba que todos tus campos se han completado.'
+        });
+        }
+       },
        loginGoogle(){
          Firebasegoogle.loginGoogle();
        }

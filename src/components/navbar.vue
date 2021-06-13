@@ -35,7 +35,7 @@
                                 <strong>Bienvenido {{user.email}}</strong>
                             </a>
                             <a class="button is-danger" @click.prevent="cerrarSesion">
-                             <font-awesome-icon class="text-dark fa-lg" icon="user-times"/>  Cerrar Sesión
+                            Cerrar Sesión
                             </a>
                         </div>
                     </div>
