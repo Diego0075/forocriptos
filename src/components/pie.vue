@@ -7,7 +7,7 @@
         <footer class="footer">
                 <div class="content has-text-centered">
                     <p>
-                        Copyright © 2021 - Diseñado por Dixego Salinas TFC DAW
+                        Copyright © 2021 - Diseñado por Diego Salinas TFC DAW
                     </p>
                 </div>
         </footer>

@@ -18,14 +18,11 @@
             </div>
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-start">
-                    <a href="#" class="navbar-item">
-                      Ultimas tendencias
-                    </a>
-                    <a href="#" class="navbar-item">
-                      Usuarios activos
-                    </a>
-                    
-                    
+                    <a class="button is-success is-light is-rounded is-pulled-left mt-2 mr-4">
+                          <router-link to="/post">
+                          Crea un nuevo Post
+                          </router-link>
+                        </a>    
                 </div>
               <template v-if="user">
                 <div class="navbar-end">

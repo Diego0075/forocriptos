@@ -9,7 +9,7 @@
                 <img src="../img/ForoCriptosPost.png" alt="rocket_contact"/>
             </div>
             <form method="post">
-                <h3 class="titulo">¡Crea un Post!</h3>
+                <h3 class="titulo">Crea tu post con el siguiente formulario</h3>
                <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
@@ -94,7 +94,7 @@ var dateTime = date+' '+time;
 <style>
 
 .titulo{
-    color: #3c1b66;
+  color: #fde888;
   font-weight: normal;
   font-size: 35px;
   font-family: Arial;

@@ -14,6 +14,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="card2 card border-0 px-4 py-5">
+                  <form @submit.prevent="login">
                     <div class="row mb-4 px-3">
                         <h6 class="mb-0 mr-4 mt-2">Iniciar sesión</h6>
                         <div class="row justify-content-start mt-4">
@@ -28,14 +29,22 @@
                     </div>
                     <div class="row px-3"> <label class="mb-1">
                             <h6 class="mb-0 text-sm">Correo electronico</h6>
-                        </label> <input class="mb-4" type="text" name="email" v-model="email" placeholder="Introduce un correo electronico válido"> </div>
+                        </label> <input class="form-control mb-4" type="email" name="email" v-model="email" placeholder="Introduce un correo electronico válido"> </div>
                     <div class="row px-3"> <label class="mb-1">
                             <h6 class="mb-0 text-sm">Contraseña</h6>
                         </label> <input type="password" name="password" v-model="password" placeholder="Introduce tu contraseña"> </div>
                     <div class="row px-3 mb-4">
                     </div> 
-                    <div class="row mb-3 px-3"> <button @click.prevent="login" class="btn btn-blue text-center">Iniciar sesión</button> </div>
-                    <div class="row mb-4 px-3"> <small class="font-weight-bold">¿No tienes cuenta? <a class="text-danger ">¡Registrate!</a></small> </div>
+                    <div class="row mb-3 px-3"> 
+                      <button class="btn btn-blue text-center">Iniciar sesión</button> 
+                      </div>
+                            </form>
+<div class="row mb-4 px-3">
+    <router-link to="/registro">
+
+   <small class="font-weight-bold">¿No tienes cuenta? <a class="text-danger ">¡Registrate!</a></small>
+    </router-link>
+    </div>
                 </div>
             </div>
         </div>
@@ -71,7 +80,7 @@ import Firebasegoogle from '@/db.js'
         if (this.email && this.password){
              Firebase.auth.signInWithEmailAndPassword(this.email, this.password)
                .then(user => {
-                 this.$router.push({ name: 'Home' }).reload()
+                 this.$router.push({ name: 'Home' })
                  console.log(user)
                 this.$notify({
                  group: 'foo',
@@ -91,13 +100,13 @@ import Firebasegoogle from '@/db.js'
                })
               })
         }else{
-          this.$notify({
-          group: 'foo',
-          type: 'error',
-          position:'top left',
-          title: 'Ups, algo no ha salido bien',
-          text: 'Comprueba que todos tus campos se han completado.'
-        });
+        //   this.$notify({
+        //   group: 'foo',
+        //   type: 'error',
+        //   position:'top left',
+        //   title: 'Ups, algo no ha salido bien',
+        //   text: 'Comprueba que todos tus campos se han completado.'
+        // });
         }
        },
        loginGoogle(){

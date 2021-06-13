@@ -23,22 +23,15 @@
             </div>
         </div>
     </section>
+    
     <br/>
     <div class="container">
         <div class="columns">
             <div class="column is-three-quarters">
                 <div class="tabs forum">
-                    <!-- <ul> -->
-                        <a class="is-active">Todos</a>
-                        <a>Mineria</a>
-                        <a>Pools</a>
-                        <a>Inversiones</a>
-                       <a class="button is-success is-light is-rounded">
-                          <router-link to="/post">
-                          Crea un nuevo Post
-                          </router-link>
-                        </a>
-                    <!-- </ul> -->
+                  
+                  <div style="height:62px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; block-size:62px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F;padding:1px;padding: 0px; margin: 0px; width: 100%;"><div style="height:40px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&pref_coin_id=1505&invert_hover=no" width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"></div></div>                    <!-- </ul> -->
+                  
                 </div>
 
                 <div v-for="Post in datosposts" v-bind:key="Post.id" class="box forum">
@@ -50,14 +43,6 @@
                         </div>
                         <div class="media-content">
                             <div class="content list-forum">
-                                <div class="is-pulled-right has-text-centered ">
-                                    <a href="#" class="love">
-                                        <span>
-                                    <i class="mdi mdi-heart-outline"></i>   
-                                  </span>
-                                    </a>
-                                    <span>15</span>
-                                </div>
                               <p class="text-content">
                                     <a href="#">{{Post.titulo}}
                               </a>
