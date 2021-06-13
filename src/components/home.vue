@@ -44,9 +44,9 @@
                 <div v-for="Post in datosposts" v-bind:key="Post.id" class="box forum">
                     <article class="media">
                         <div class="media-left">
-                            <figure class="image avatar is-64x64">
+                            <!-- <figure class="image avatar is-64x64">
                                 <img :src="Post.img" :alt=Post.img class="is-rounded">
-                            </figure>
+                            </figure> -->
                         </div>
                         <div class="media-content">
                             <div class="content list-forum">
@@ -82,21 +82,6 @@
                         </div>
                     </article>
                     
-                </div>
-                <div class="box">
-                    <nav class="pagination is-rounded" role="navigation" aria-label="pagination">
-                        <a class="pagination-previous">Previous</a>
-                        <a class="pagination-next">Next page</a>
-                        <ul class="pagination-list">
-                            <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
-                            <li><span class="pagination-ellipsis">&hellip;</span></li>
-                            <li><a class="pagination-link" aria-label="Goto page 45">2</a></li>
-                            <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">3</a></li>
-                            <li><a class="pagination-link" aria-label="Goto page 47">4</a></li>
-                            <li><span class="pagination-ellipsis">&hellip;</span></li>
-                            <li><a class="pagination-link" aria-label="Goto page 86">5</a></li>
-                        </ul>
-                    </nav>
                 </div>
             </div>
             <div class="column">
@@ -157,7 +142,7 @@ import firebase from '../db'
     },
 
     firestore: {
-      datosposts:db.collection('Post'),
+      datosposts:db.collection('Post').orderBy('time','desc'),
     },
 }
 
