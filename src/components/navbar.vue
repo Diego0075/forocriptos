@@ -110,7 +110,7 @@ import Firebase from '../db'
 
       cerrarSesion(){
         Firebase.auth.signOut().then(() =>{
-          this.$router.push({name: 'login'})
+          this.$router.push({name: 'Home'})
         })
       }
     },

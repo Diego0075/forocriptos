@@ -8,38 +8,35 @@
             <div class="contact-image">
                 <img src="../img/ForoCriptosPost.png" alt="rocket_contact"/>
             </div>
-            <form method="post">
+            <form @submit.prevent="añadirPost()">
                 <h3 class="titulo">Crea tu post con el siguiente formulario</h3>
                <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input type="text" v-model="titulo" name="txtName" class="form-control" placeholder="Titulo *" value="" />
+                            <input type="text" v-model="titulo" name="txtName" class="form-control" required placeholder="Titulo *" value="" />
                         </div>
                         <div class="form-group">
-                            <textarea name="txtMsg" class="form-control" v-model="descripcion" placeholder="¿Que quieres contar? *" style="width: 100%; height: 150px;"></textarea>
+                            <textarea name="txtMsg" class="form-control" v-model="descripcion" required  placeholder="¿Que quieres contar? *" style="width: 100%; height: 150px;"></textarea>
                         </div>
                         
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input type="text" v-model="tag" name="txtPhone" class="form-control" placeholder="Tag *" value="" />
+                            <input type="text" v-model="tag" name="txtPhone" class="form-control" required placeholder="Tag *" value="" />
                         </div>
-                        <!-- <div class="form-group">
-                            <input type="file" accept="image/*" />
-                        </div> -->
                         <div class="form-group">
-                            <input type="text" v-model="autor" name="txtPhone" class="form-control" placeholder="autor" value="" />
+                            <input type="text" v-model="autor" name="txtPhone" class="form-control" required placeholder="autor" value="" />
                         </div>
                     </div>
 
                 <div class="col-md-12 mt-3">
 
                     <div>
-                        <router-link to="/">
-                            <button class="btn boton" @click.prevent="añadirPost()"> Enviar</button>
-                        </router-link>
+                            <button class="btn boton"> Enviar</button>
+                        
                     </div>
                 </div>
+            
                         
                 </div>
             </form>
@@ -80,6 +77,14 @@ var dateTime = date+' '+time;
             autor: this.autor,
             time: dateTime,
           })
+          this.$router.push({ name: 'Home' })
+          this.$notify({
+                  group: 'foo',
+                  type: 'success',
+                  position:'top left',
+                  title: '¡Listo!',
+                  text: 'El post se ha añadido correctamente'
+                })
         },
 
     },

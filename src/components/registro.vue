@@ -31,7 +31,7 @@
                         </label>
                         
                       </div>
-                      <div class="col px-md-5"><input class="mb-4" type="email" name="email" placeholder="Introduce un correo electronico válido" v-model="email"></div>
+                      <div class="col px-md-5"><input class="mb-4" type="email" name="email" required placeholder="Introduce un correo electronico válido" v-model="email"></div>
                     </div>
 
                     <div class="row mx-md-n5">
@@ -41,7 +41,7 @@
                         </label>
                         
                       </div>
-                      <div class="col px-md-5"><input class="mb-4" type="password" name="password" placeholder="Escribe la contraseña" v-model="password"></div>
+                      <div class="col px-md-5"><input class="mb-4" type="password" required name="password" placeholder="Escribe la contraseña" v-model="password"></div>
                     </div>
 
                     <div class="row mx-md-n5">
@@ -51,7 +51,7 @@
                         </label>
                         
                       </div>
-                      <div class="col px-md-5"><input class="mb-4" type="password" name="password" placeholder="Confirma la contraseña" v-model="passwordconfirm"></div>
+                      <div class="col px-md-5"><input class="mb-4" type="password" required name="password" placeholder="Confirma la contraseña" v-model="passwordconfirm"></div>
                     </div>
 
                     <!-- <div class="row px-3"> <label class="mb-1">
