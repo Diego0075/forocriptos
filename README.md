@@ -1,4 +1,4 @@
-# forocriptos
+# forocriptos.es
 
 ## Project setup
 ```
