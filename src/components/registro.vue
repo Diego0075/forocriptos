@@ -13,7 +13,6 @@
                     <div class="row px-3 justify-content-center mt-4 mb-5 border-line"> <img src="../img/muro.png" class="image"> </div>
                 </div>
             </div>
-          <!-- <form @submit.prevent="registro"> -->
             <div class="col-lg-6">
                 <div class="card2 card border-0 px-4 py-5">
                     <div class="row mb-4 px-3">
@@ -53,15 +52,6 @@
                       </div>
                       <div class="col px-md-5"><input class="mb-4" type="password" required name="password" placeholder="Confirma la contraseña" v-model="passwordconfirm"></div>
                     </div>
-
-                    <!-- <div class="row px-3"> <label class="mb-1">
-                            <h6 class="mb-0 text-sm">Correo electronico</h6>
-                        </label> <input class="mb-4" type="text" name="email" placeholder="Introduce un correo electronico válido"> </div>
-                    <div class="row px-3"> <label class="mb-1">
-                            <h6 class="mb-0 text-sm">Contraseña</h6>
-                        </label> <input type="password" name="password" placeholder="Introduce tu contraseña"> </div>
-                    <div class="row px-3 mb-4">
-                    </div>  -->
                     <div class="row mb-4 px-3">
                       <div class="row mb-4 px-3">
                         <h6 class="mt-4"><button @click.prevent="registro" class="btn btn-blue text-center">Registrarse</button></h6>
@@ -69,7 +59,6 @@
                     </div>
                 </div>
             </div>         
-            <!-- </form> -->
         </div>
     </div>
 </div>
@@ -174,10 +163,7 @@ import firebase from 'firebase'
     margin-left: 35px
 }
 
-.image {
-    width: 1200px;
-    /* height: 280px */
-}
+
 
 .border-line {
     border-right: 1px solid #EEEEEE
@@ -276,7 +262,7 @@ a {
 
     .image {
         width: 300px;
-        height: 220px
+        height: auto
     }
 
     .border-line {

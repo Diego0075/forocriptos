@@ -8,7 +8,7 @@
 import inicio from '@/components/inicio.vue'
 
 export default {
-  name: 'login',
+  name: 'Inicio',
   components: {
     inicio
   }

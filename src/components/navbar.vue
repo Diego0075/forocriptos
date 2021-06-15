@@ -65,7 +65,6 @@
 </template>
 
 <script lang="js">
-// import {db} from '../db'
 import Firebase from '../db'
 
 
@@ -78,16 +77,6 @@ import Firebase from '../db'
          if (user){
            this.user.loggedIn = true;
            this.user.data = user;
-           // Le asigna al array imprime carrito el user actual
-          
-        //    this.$bind('imprimeCarrito',db.collection('Carrito').where("user","==",Firebase.auth.currentUser.email))
-        // }else{
-            // cunando se desconecta
-             
-          //  this.user.loggedIn = false;
-          //  this.user.data = user;
-           // lo limpia
-          // this.$bind('imprimeCarrito',db.collection('Carrito').where("user","==",""))
          }
         })
     },
@@ -95,7 +84,6 @@ import Firebase from '../db'
       return {
         datos:[],
         user: null,
-        // imprimeCarrito:[]
       }
     },
     methods: {
@@ -115,13 +103,9 @@ import Firebase from '../db'
       }
     },
     computed: {
-      //  totalcarrito(){
-      //   return this.imprimeCarrito.length
-      // }
+
     },
     firestore: {
-      // datos:db.collection('Lenovo'),
-      //  imprimeCarrito: db.collection("Carrito").where("user","==",Firebase.auth.currentUser ?Firebase.auth.currentUser.email:"")
 
     },
 

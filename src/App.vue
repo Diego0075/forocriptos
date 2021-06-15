@@ -9,11 +9,9 @@
 
 <script>
 
-// import {db} from "./db.js"
 import navbar from './components/navbar.vue'
 import pie from './components/pie.vue'
 
-// import footer from './components/footer.vue'
 export default {
   name: 'App',
   components: {
@@ -29,11 +27,6 @@ export default {
     }
   },
 
-
-  //  firestore: {
-  //     loading1:db.collection('Lenovo'),
-  //     loading2:db.collection('MSI'),
-  //   },
 
 }
 </script>

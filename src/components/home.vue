@@ -26,7 +26,7 @@
     
     <br/>
     <div class="container">
-        <div class="columns">
+        <div class="row">
             <div class="column is-three-quarters">
                 <div class="tabs forum">
                   
@@ -37,9 +37,6 @@
                 <div v-for="Post in datosposts" v-bind:key="Post.id" class="box forum">
                     <article class="media">
                         <div class="media-left">
-                            <!-- <figure class="image avatar is-64x64">
-                                <img :src="Post.img" :alt=Post.img class="is-rounded">
-                            </figure> -->
                         </div>
                         <div class="media-content">
                             <div class="content list-forum">
@@ -142,7 +139,6 @@ import firebase from '../db'
   }
   .añadir{
     text-align: right;
-    /* margin-left: 438px; */
   }
   .box{
     box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
